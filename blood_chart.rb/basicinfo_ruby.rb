@@ -1,14 +1,11 @@
-puts "Hello enter your height"
-height = gets.chomp
-puts "Enter your weight"
-weight = gets.chomp
-puts "Enter recent blood pressure"
-bp = gets.chomp
-puts "Enter your sex"
-sex = gets.chomp
-puts "Enter a recent heart rate"
-hr = gets.chomp
-puts "Enter a recent temperature"
-temp = gets.chomp
+def time
+    time = Time.new
+    time.strftime("%A %d/%m/%y at %I:%M%p")
+end
 
-puts "#{height}, #{weight}, #{bp}, #{sex}, #{hr}, #{temp}"
+def basic_info(name,height,weight,hr,temp,sex,age=18,bp)
+    puts "#{name.capitalize} is a #{age} year old #{sex} who is #{height} inches tall and weighs #{weight}, vitals are as follows #{bp},#{temp},#{hr}"
+    puts "#{time}"
+end
+
+basic_info("shawn","6'2",264,88,98.4,"male",25,"147/88")
